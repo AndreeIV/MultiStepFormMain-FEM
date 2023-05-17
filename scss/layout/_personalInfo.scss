@@ -1,0 +1,63 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'layout/globalrepit';
+
+.content__personal-info {
+    @extend .content;
+    display: none;
+
+    
+    
+    .container__form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+        gap: 1.5rem;
+
+        .campo {
+            display: flex;
+            flex-direction: column;
+            gap: .3rem;
+            cursor: pointer;
+
+            @include m.desktop {
+                gap: 1rem;
+            }
+            
+    
+            &>label {
+                display: flex;
+                justify-content: space-between;
+                font-size: 1.3rem;
+                color: v.$Marine-blue;
+
+                @include m.desktop {
+                    font-size: 1.6rem;
+                    font-weight: v.$normal;
+                }
+                
+            }
+    
+            &>input {
+                padding: .9rem;
+                font-size: 1.5rem;
+                font-weight: 500;
+                border: 1px solid v.$Light-gray;
+                border-radius: 8px;
+                
+                @include m.desktop {
+                    padding: 1.3rem;
+                }
+                
+
+                &::placeholder {
+                    color: v.$Cool-gray;
+                    
+                }
+                &:focus {
+                    border:1px solid v.$Purplish-blue;
+                }
+            }
+        }
+    }
+}

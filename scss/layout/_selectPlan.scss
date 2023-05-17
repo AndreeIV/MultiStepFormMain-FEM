@@ -1,0 +1,83 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'layout/globalrepit';
+
+
+.content__select-plan {
+    @extend .content;
+    
+    display: none;
+
+    .container__plans {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        @include m.desktop {
+            width: 100%;
+            flex-direction: row;
+            // justify-content: space-between;
+        }
+        
+
+        .plan {
+            display: flex;
+            border: 1px solid v.$Light-gray;
+            border-radius: 8px;
+            padding: 1.4rem;
+            gap: 1.5rem;
+            background-color: transparent;
+            cursor: pointer;
+            @include m.desktop {
+                flex-direction: column;
+                gap: 4rem;
+
+                flex: 1;
+
+                &:hover {
+                    // background-color: v.$Magnolia;
+                    border: 1px solid v.$Purplish-blue;
+                }
+                &:focus {
+                    background-color: v.$Magnolia;;
+                }
+            }
+            
+
+            &>img {
+
+            }
+
+            .data {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 1rem;
+
+                &>h3 {
+                    font-size: 1.7rem;
+                    color: v.$Marine-blue;
+                    margin: 0;
+                }
+
+                &>h4 {
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    color: v.$Cool-gray;
+                    margin: 0;
+                }
+
+            }
+            .data-year {
+                display: none;
+                gap: 1rem;
+            }
+            &:focus {
+                border: 1px solid v.$Purplish-blue;
+                
+            }
+            
+        }
+    }
+}

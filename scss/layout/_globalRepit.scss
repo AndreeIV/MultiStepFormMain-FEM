@@ -1,0 +1,54 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.content {
+    // background-color: v.$White;
+    background-color: v.$Alabaster;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+    margin: 0 1.5rem;
+    border-radius: 10px;
+
+    @include m.desktop {
+        margin: 0;     
+        justify-content: center;
+        padding-top: 3rem;
+    }
+
+    &>h2 {
+        color: v.$Marine-blue;
+        font-size: 2.45rem;
+        margin:  0;
+        @include m.desktop {
+            font-size: 3.5rem;
+            margin-top: 1rem;
+        }
+        
+    }
+
+    &>p {
+        font-size: v.$font-size;
+        color: v.$Cool-gray;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+        font-weight: v.$normal;
+
+        @include m.desktop {
+            font-size: 1.6rem;
+            margin: .8rem 0 2.5rem 0;
+        }
+        
+    }
+}
+
+.container__content {
+    @include m.desktop {
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-right: 6.5rem;
+    }
+    
+}

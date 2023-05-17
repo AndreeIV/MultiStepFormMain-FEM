@@ -1,0 +1,17 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'layout/globalRepit';
+
+.content__thank-you {
+    @extend .content;
+    text-align: center;
+
+    display: none;
+
+    &>img {
+        width: 6rem;
+        margin: 5rem auto 2rem auto;
+
+    }
+    padding-bottom: 5rem;
+}

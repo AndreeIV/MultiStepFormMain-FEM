@@ -1,0 +1,45 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    height: 100%;
+    font-family: v.$fuente_principal;
+}
+body {
+    background-color: v.$Magnolia;
+    background-image: url('./../../assets/images/bg-sidebar-mobile.svg');
+    background-repeat: no-repeat;
+    @include m.desktop {
+        height: 100vh;
+        display: grid;
+        place-content: center;
+        background-image: url('');
+    }
+    
+    main {
+
+        @include m.desktop {
+            
+            display: flex;
+            background-color: v.$Alabaster;
+            padding: 2rem;
+            gap: 6rem;
+            border-radius: 10px;
+        }
+        
+
+    }
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+.example {
+    display: none;
+}

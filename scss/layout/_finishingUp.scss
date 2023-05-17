@@ -1,0 +1,78 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'layout/globalRepit';
+
+.content__finishing-up {
+    @extend .content;
+    display: none;
+
+
+}
+.container__results {
+    width: calc(100% + 5rem);
+
+}
+#container__appResults {
+    width: 100%;
+    background-color: v.$Magnolia;
+    margin-top: 2rem;
+    padding: 2rem;
+
+    &:last-child {
+        margin-bottom: 4rem;
+    }
+
+    .separator {
+        margin: 2rem 0;
+        width: 100%;
+        background-color: v.$Light-gray;
+        height: 1px;
+    }
+}
+
+.finish-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+
+    &>div {
+        
+        &>h3 {
+            font-size: 1.6rem;
+            margin: 0;
+            margin-bottom: .6rem;
+        }
+        
+        &>a {
+            font-size: 1.4rem;
+            color: v.$Cool-gray;
+            text-decoration: underline;
+        }
+    }
+
+    &>h3 {
+        font-size: 1.7rem;
+    }
+}
+
+.finish-addon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+
+    
+
+    .name-addon  {
+        color: v.$Cool-gray;
+        margin: 0;
+    }
+
+    .price-addon {
+        margin: 0;
+        // color: v.$Cool-gray;
+    }
+}

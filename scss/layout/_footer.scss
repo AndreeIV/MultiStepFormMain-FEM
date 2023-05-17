@@ -1,0 +1,43 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+footer {
+    background-color: v.$Alabaster;
+    margin-top: 14rem;
+    display: flex;
+    justify-content: space-between;
+
+    @include m.desktop {
+        background-color: transparent;
+        margin: 0;
+    }
+    
+
+    .btn {
+        border-radius: 5px;
+        border: none;
+        margin: 1.5rem;
+        padding: 1rem 1.8rem;
+        font-size: v.$font-size;
+        cursor: pointer;
+
+    }
+    .back-step {
+        color: v.$Cool-gray;
+        background-color: transparent;
+        font-weight: v.$bold;
+
+        @include m.desktop {
+            &:hover {
+                color: v.$Marine-blue;
+                font-weight: v.$bold;
+            }
+        }
+        
+    }
+
+    .next-step {
+        color: v.$Magnolia;
+        background-color: v.$Marine-blue;
+    }
+}
